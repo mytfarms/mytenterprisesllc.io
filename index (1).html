@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MYT Enterprises, LLC — Auctions · Livestock · Construction</title>
+
+  <!-- ✦ META: Add your own description below -->
+  <meta name="description" content="MYT Enterprises, LLC offers auction services, livestock sales, and construction in central Colorado. Honest work, rooted in the land." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.mytenterprisesinc.com/" />
+
+  <!-- ✦ OPEN GRAPH (controls how AI engines, social, and link previews read your site) -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://www.mytenterprisesinc.com/" />
+  <meta property="og:title"       content="MYT Enterprises, LLC — Auctions · Livestock · Construction" />
+  <meta property="og:description" content="MYT Enterprises, LLC offers auction services, livestock sales, and construction in central Colorado. Honest work, rooted in the land." />
+  <meta property="og:site_name"   content="MYT Enterprises, LLC" />
+  <meta property="og:locale"      content="en_US" />
+
+  <!-- ✦ SCHEMA.ORG JSON-LD — structured data for AI engines and search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["LocalBusiness", "GeneralContractor"],
+        "@id": "https://www.mytenterprisesinc.com/#business",
+        "name": "MYT Enterprises, LLC",
+        "url": "https://www.mytenterprisesinc.com/",
+        "logo": "https://www.mytenterprisesinc.com/logo.png",
+        "description": "MYT Enterprises, LLC is a multi-faceted agricultural and construction operation based in Colorado, offering auction services, livestock sales, and construction projects.",
+        "telephone": "+17193304280",
+        "address": {
+          "@type": "PostalAddress",
+          "addressRegion": "CO",
+          "addressCountry": "US"
+        },
+        "areaServed": {
+          "@type": "State",
+          "name": "Colorado"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "MYT Enterprises Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Auction Services",
+                "url": "https://www.mytenterprisesinc.com/auctions.html",
+                "description": "Farm equipment, estate sales, and regional auction events run with transparency and expertise."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Livestock Sales",
+                "url": "https://www.mytenterprisesinc.com/livestock.html",
+                "description": "Quality cattle and livestock raised and handled with care in Colorado."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Construction Services",
+                "url": "https://www.mytenterprisesinc.com/construction.html",
+                "description": "Agricultural and general construction including pole barns, site prep, and project builds."
+              }
+            }
+          ]
+        },
+        "sameAs": [
+          "https://www.mytenterprisesinc.com/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.mytenterprisesinc.com/#website",
+        "url": "https://www.mytenterprisesinc.com/",
+        "name": "MYT Enterprises, LLC",
+        "publisher": {
+          "@id": "https://www.mytenterprisesinc.com/#business"
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Oswald:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --soil:      #2C1A0E;
+      --bark:      #4A2C17;
+      --saddle:    #7B4A2D;
+      --tan:       #C49A6C;
+      --straw:     #E8D5A3;
+      --parchment: #F5EDD8;
+      --cream:     #FAF6ED;
+      --rust:      #A0431F;
+      --iron:      #6B5B4E;
+      --font-display: 'Playfair Display', Georgia, serif;
+      --font-body:    'Libre Baskerville', Georgia, serif;
+      --font-label:   'Oswald', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { background-color: var(--cream); color: var(--soil); font-family: var(--font-body); font-size: 17px; line-height: 1.75; }
+    img  { max-width: 100%; display: block; }
+    a    { color: var(--rust); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* NAV */
+    .site-nav { background-color: var(--soil); border-bottom: 4px solid var(--tan); position: sticky; top: 0; z-index: 100; }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 70px; }
+    .nav-logo  { font-family: var(--font-display); font-size: 1.5rem; font-weight: 900; color: var(--straw); text-decoration: none; }
+    .nav-logo span { color: var(--tan); }
+    .nav-links { list-style: none; display: flex; gap: .25rem; }
+    .nav-links a { font-family: var(--font-label); font-size: .85rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--straw); padding: .5rem 1rem; border-radius: 2px; transition: background .2s, color .2s; text-decoration: none; }
+    .nav-links a:hover, .nav-links a.active { background: var(--bark); color: var(--tan); }
+    .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .nav-toggle span { display: block; width: 26px; height: 2px; background: var(--straw); border-radius: 2px; }
+    @media (max-width: 700px) {
+      .nav-toggle { display: flex; }
+      .nav-links  { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: var(--soil); padding: 1rem 2rem 1.5rem; border-bottom: 3px solid var(--tan); gap: .15rem; }
+      .nav-links.open { display: flex; }
+    }
+
+    /* HERO */
+    .hero { background-color: var(--soil); background-image: radial-gradient(ellipse at 70% 40%, rgba(122,74,45,.45) 0%, transparent 65%), repeating-linear-gradient(-45deg, transparent, transparent 28px, rgba(255,255,255,.015) 28px, rgba(255,255,255,.015) 29px); min-height: 88vh; display: flex; align-items: center; position: relative; overflow: hidden; padding: 5rem 2rem; }
+    .hero::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 6px; background: repeating-linear-gradient(90deg, var(--rust) 0px, var(--rust) 20px, var(--tan) 20px, var(--tan) 40px); }
+    .hero-bg-letter { position: absolute; right: -.05em; top: 50%; transform: translateY(-50%); font-family: var(--font-display); font-size: clamp(16rem, 28vw, 34rem); font-weight: 900; color: rgba(255,255,255,.025); line-height: 1; pointer-events: none; user-select: none; }
+    .hero-content { max-width: 1100px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
+    .hero-eyebrow { font-family: var(--font-label); font-size: .8rem; font-weight: 600; letter-spacing: .25em; text-transform: uppercase; color: var(--tan); margin-bottom: 1.25rem; display: flex; align-items: center; gap: .75rem; animation: fadeUp .6s ease both; }
+    .hero-eyebrow::before { content: ''; display: inline-block; width: 40px; height: 2px; background: var(--rust); }
+    .hero h1 { font-family: var(--font-display); font-size: clamp(3rem, 7vw, 6.5rem); font-weight: 900; color: var(--straw); line-height: 1.0; margin-bottom: .15em; animation: fadeUp .7s .1s ease both; }
+    .hero h1 em { font-style: normal; color: var(--tan); }
+    .hero-tagline { font-family: var(--font-body); font-size: clamp(1rem, 2vw, 1.2rem); font-style: italic; color: var(--straw); opacity: .75; margin: 1.5rem 0 2.25rem; max-width: 480px; line-height: 1.6; animation: fadeUp .7s .2s ease both; }
+    .hero-cta-row { display: flex; gap: 1rem; flex-wrap: wrap; animation: fadeUp .7s .3s ease both; }
+    .btn-hero { font-family: var(--font-label); font-size: .85rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--cream); background: var(--rust); padding: .85rem 2rem; border-radius: 2px; text-decoration: none; border: 2px solid var(--rust); transition: background .2s, border-color .2s; }
+    .btn-hero:hover { background: var(--bark); border-color: var(--tan); text-decoration: none; }
+    .btn-hero-ghost { background: transparent; border: 2px solid rgba(196,154,108,.5); color: var(--straw); }
+    .btn-hero-ghost:hover { border-color: var(--tan); background: rgba(196,154,108,.1); }
+
+    /* STRIPE */
+    .brand-stripe { height: 6px; background: repeating-linear-gradient(90deg, var(--rust) 0px, var(--rust) 20px, var(--tan) 20px, var(--tan) 40px); }
+
+    /* LAYOUT */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.75rem; }
+    section { padding: 4rem 0; }
+    .section-label { font-family: var(--font-label); font-size: .78rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--rust); margin-bottom: .5rem; }
+    .section-title { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 900; color: var(--soil); line-height: 1.15; margin-bottom: 1rem; }
+    .section-sub   { font-size: 1rem; color: var(--iron); max-width: 560px; line-height: 1.7; }
+
+    /* PILLAR CARDS */
+    .pillars { background: var(--parchment); padding: 5rem 0; }
+    .pillar-card { background: var(--cream); border: 1px solid rgba(196,154,108,.4); border-top: 5px solid var(--rust); border-radius: 3px; padding: 2.25rem 2rem; text-align: center; transition: transform .25s, box-shadow .25s; position: relative; overflow: hidden; }
+    .pillar-card::before { content: attr(data-icon); position: absolute; bottom: -.15em; right: .1em; font-size: 6rem; opacity: .06; line-height: 1; pointer-events: none; }
+    .pillar-card:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(44,26,14,.14); }
+    .pillar-icon { font-size: 2.5rem; margin-bottom: 1rem; display: flex; justify-content: center; align-items: center; min-height: 64px; }
+    .pillar-card h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--soil); margin-bottom: .75rem; }
+    .pillar-card p  { font-size: .92rem; color: var(--iron); line-height: 1.7; margin-bottom: 1.25rem; }
+
+    /* BUTTONS */
+    .btn { display: inline-block; font-family: var(--font-label); font-size: .8rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--cream); background: var(--rust); padding: .6rem 1.4rem; border-radius: 2px; margin-top: 1rem; transition: background .2s; text-decoration: none; }
+    .btn:hover { background: var(--soil); text-decoration: none; }
+    .btn-outline { background: transparent; color: var(--rust); border: 2px solid var(--rust); }
+    .btn-outline:hover { background: var(--rust); color: var(--cream); }
+
+    /* ABOUT */
+    .about-band { background: var(--bark); padding: 5rem 0; position: relative; overflow: hidden; }
+    .about-band::before { content: 'MYT'; position: absolute; right: -.1em; top: 50%; transform: translateY(-50%); font-family: var(--font-display); font-size: 18rem; font-weight: 900; color: rgba(255,255,255,.03); pointer-events: none; line-height: 1; }
+    .about-inner { max-width: 700px; }
+    .about-band .section-label { color: var(--tan); }
+    .about-band .section-title { color: var(--straw); }
+    .about-band p { color: rgba(232,213,163,.85); line-height: 1.8; margin-bottom: 1rem; font-size: 1rem; }
+    .stats-row { display: flex; gap: 2.5rem; margin-top: 2.5rem; flex-wrap: wrap; }
+    .stat { border-left: 3px solid var(--rust); padding-left: 1rem; }
+    .stat-num   { font-family: var(--font-display); font-size: 2.2rem; font-weight: 900; color: var(--straw); line-height: 1; }
+    .stat-label { font-family: var(--font-label); font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; color: var(--tan); margin-top: .2rem; }
+
+    /* CARDS */
+    .card { background: var(--parchment); border: 1px solid var(--tan); border-top: 4px solid var(--rust); border-radius: 3px; padding: 1.75rem; transition: transform .2s, box-shadow .2s; }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(44,26,14,.15); }
+    .card-tag  { font-family: var(--font-label); font-size: .72rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: var(--rust); margin-bottom: .5rem; }
+    .card h3   { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--soil); margin-bottom: .5rem; line-height: 1.3; }
+    .card p    { font-size: .9rem; color: var(--iron); line-height: 1.65; }
+    .card-meta { font-family: var(--font-label); font-size: .75rem; letter-spacing: .08em; color: var(--saddle); margin-top: 1rem; padding-top: .75rem; border-top: 1px solid var(--tan); }
+
+    /* SECONDARY SITE BAND */
+    .sister-band { background: var(--parchment); border-top: 3px solid var(--tan); border-bottom: 3px solid var(--tan); padding: 2.5rem 2rem; text-align: center; }
+    .sister-band p.section-label { margin-bottom: .4rem; }
+    .sister-band h2 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--soil); margin-bottom: .5rem; }
+    .sister-band p.sub { font-size: .95rem; color: var(--iron); max-width: 500px; margin: 0 auto .75rem; }
+
+    /* CONTACT */
+    .contact-band { background: var(--soil); padding: 4rem 2rem; text-align: center; }
+    .contact-band h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 3.5vw, 2.8rem); color: var(--straw); margin-bottom: .75rem; }
+    .contact-band > p { color: var(--tan); font-family: var(--font-label); letter-spacing: .05em; font-size: .95rem; margin-bottom: 1.75rem; }
+    .contact-details { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; margin-top: 2rem; }
+    .contact-item { font-family: var(--font-label); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--iron); }
+    .contact-item strong { display: block; color: var(--straw); font-size: 1rem; letter-spacing: .05em; margin-top: .2rem; }
+
+    /* FOOTER */
+    .site-footer { background: var(--soil); color: var(--straw); text-align: center; padding: 2.5rem 2rem; border-top: 4px solid var(--tan); }
+    .site-footer p { font-family: var(--font-label); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--iron); margin-top: .35rem; }
+    .footer-logo  { font-family: var(--font-display); font-size: 1.6rem; font-weight: 900; color: var(--straw); margin-bottom: .5rem; }
+    .footer-links { display: flex; justify-content: center; gap: 1.5rem; margin-top: 1rem; flex-wrap: wrap; }
+    .footer-links a { font-family: var(--font-label); font-size: .8rem; letter-spacing: .1em; text-transform: uppercase; color: var(--tan); text-decoration: none; transition: color .2s; }
+    .footer-links a:hover { color: var(--straw); }
+    .footer-sister { margin-top: 1rem; font-family: var(--font-label); font-size: .78rem; color: var(--iron); }
+    .footer-sister a { color: var(--tan); }
+    .footer-sister a:hover { color: var(--straw); }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  </style>
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="nav-logo" href="index.html">MYT <span>Enterprises</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="auctions.html">Auctions</a></li>
+        <li><a href="livestock.html">Livestock</a></li>
+        <li><a href="construction.html">Construction</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero" aria-label="Hero">
+      <div class="hero-bg-letter" aria-hidden="true">M</div>
+      <div class="hero-content">
+        <div class="hero-eyebrow">MYT Enterprises, LLC · Colorado</div>
+        <h1>Built on<br><em>Grit &amp;</em><br>Hard Work.</h1>
+        <p class="hero-tagline">Auctions, livestock, and construction services you can count on — rooted in the land and built to last.</p>
+        <div class="hero-cta-row">
+          <a href="auctions.html" class="btn-hero">View Auctions</a>
+          <a href="#services" class="btn-hero btn-hero-ghost">Our Services</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="brand-stripe" aria-hidden="true"></div>
+
+    <section class="pillars" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <div style="text-align:center; margin-bottom:3rem;">
+          <p class="section-label">What We Do</p>
+          <h2 class="section-title" id="services-heading">Three Ways We Serve You</h2>
+          <p class="section-sub" style="margin:0 auto;">Whether you're buying at auction, sourcing quality livestock, or breaking ground on a new build — MYT Enterprises has the experience and drive to get it done right.</p>
+        </div>
+        <div class="grid-3">
+          <article class="pillar-card" data-icon="">
+            <span class="pillar-icon" aria-hidden="true">
+              <svg width="80" height="72" viewBox="0 0 140 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g transform="translate(18,8) rotate(-28,60,60)">
+                  <rect x="6"  y="51" width="72" height="18" rx="9"  fill="#A0561E"/>
+                  <ellipse cx="10" cy="60" rx="11" ry="9" fill="#7B3D10"/>
+                  <rect x="74" y="44" width="16" height="32" rx="4"  fill="#7B3D10"/>
+                  <rect x="76" y="51" width="16" height="5"  rx="2"  fill="#5A2A08"/>
+                  <rect x="76" y="60" width="16" height="5"  rx="2"  fill="#5A2A08"/>
+                  <rect x="86" y="30" width="26" height="60" rx="7"  fill="#9A5020"/>
+                  <rect x="86" y="30" width="26" height="14" rx="6"  fill="#C47C3A"/>
+                  <rect x="86" y="76" width="26" height="14" rx="6"  fill="#C47C3A"/>
+                </g>
+              </svg>
+            </span>
+            <h3>Colorado Auction Services</h3>
+            <p>From farm equipment to estate sales, our auction events connect buyers and sellers across Colorado and the surrounding region. Transparent, efficient, and expertly run.</p>
+            <a href="auctions.html" class="btn">Auction Updates →</a>
+          </article>
+          <article class="pillar-card" data-icon="🐄">
+            <span class="pillar-icon" aria-hidden="true">🐄</span>
+            <h3>Livestock Sales &amp; Ranching</h3>
+            <p>Quality cattle and livestock, raised and handled with care on Colorado range. We share updates on animals, sales, and ranching insights to keep you informed.</p>
+            <a href="livestock.html" class="btn">Livestock News →</a>
+          </article>
+          <article class="pillar-card" data-icon="🏗️">
+            <span class="pillar-icon" aria-hidden="true">🏗️</span>
+            <h3>Agricultural Construction</h3>
+            <p>Solid builds, honest work. Follow along on our Colorado construction projects — from site prep to finishing touches — with project logs and updates.</p>
+            <a href="construction.html" class="btn">Project Updates →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-band" aria-labelledby="about-heading">
+      <div class="container">
+        <div class="about-inner">
+          <p class="section-label">About MYT Enterprises</p>
+          <h2 class="section-title" id="about-heading">Who We Are</h2>
+          <p>MYT Enterprises, LLC is a multi-faceted operation rooted in hard work, integrity, and a deep respect for the land and the people we serve. We've built our reputation one handshake at a time — in the auction ring, out in the pasture, and on the job site — right here in Colorado.</p>
+          <p>This site is your window into what we're doing day to day. Browse auction listings, follow our livestock updates, and track our construction projects — all in one place.</p>
+          <p>Want to go deeper? Visit our sister site at <a href="https://www.mytenterprisesinc.com" style="color:var(--tan);" rel="me">mytenterprisesinc.com</a> for more.</p>
+          <div class="stats-row">
+            <div class="stat"><div class="stat-num">3</div><div class="stat-label">Divisions</div></div>
+            <div class="stat"><div class="stat-num">100%</div><div class="stat-label">Hands-On</div></div>
+            <div class="stat"><div class="stat-num">LLC</div><div class="stat-label">Established</div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="latest" aria-labelledby="latest-heading">
+      <div class="container">
+        <p class="section-label">Fresh Off the Press</p>
+        <h2 class="section-title" id="latest-heading" style="margin-bottom:2rem;">Latest Updates</h2>
+        <div class="grid-3">
+          <article class="card">
+            <p class="card-tag">Auctions</p>
+            <h3>Spring Equipment Auction — Save the Date</h3>
+            <p>Our annual spring auction is coming up. Heavy equipment, trailers, tools, and more. Registration opens soon.</p>
+            <div class="card-meta">Posted Recently · Auctions Division</div>
+            <a href="auctions.html" class="btn btn-outline">Read More</a>
+          </article>
+          <article class="card">
+            <p class="card-tag">Livestock</p>
+            <h3>New Calves Hit the Ground</h3>
+            <p>Calving season is in full swing. Check the livestock blog for updates on numbers, weights, and availability.</p>
+            <div class="card-meta">Posted Recently · Livestock Division</div>
+            <a href="livestock.html" class="btn btn-outline">Read More</a>
+          </article>
+          <article class="card">
+            <p class="card-tag">Construction</p>
+            <h3>Pole Barn Project: Foundation Complete</h3>
+            <p>Site prep and foundation work is wrapped up on our latest pole barn build. Framing starts next week.</p>
+            <div class="card-meta">Posted Recently · Construction Division</div>
+            <a href="construction.html" class="btn btn-outline">Read More</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ✦ SISTER SITE CROSS-LINK BAND -->
+    <div class="sister-band">
+      <p class="section-label">Also From MYT</p>
+      <h2>Explore Our Sister Site</h2>
+      <p class="sub">Looking for more from MYT Enterprises? Visit <strong>mytenterprisesinc.com</strong> for additional resources, insights, and updates from our extended operations.</p>
+      <a href="https://www.mytenterprisesinc.com" class="btn" rel="me" target="_blank">Visit mytenterprisesinc.com →</a>
+    </div>
+
+    <div class="contact-band">
+      <h2>Get In Touch</h2>
+      <p>Questions about an auction, livestock, or a construction project? We'd love to hear from you.</p>
+      <div class="contact-details">
+        <div class="contact-item">Phone<strong><a href="tel:7193304280" style="color:var(--straw);text-decoration:none;">(719) 330-4280</a></strong></div>
+        <div class="contact-item">Email<strong><a href="/cdn-cgi/l/email-protection#dfb6b1b9b09fb2a6abbab1abbaadafadb6acbaacb6b1bcf1bcb0b2" style="color:var(--straw);text-decoration:none;"><span class="__cf_email__" data-cfemail="f990979f96b994808d9c978d9c8b898b908a9c8a90979ad79a9694">[email&#160;protected]</span></a></strong></div>
+        <div class="contact-item">Location<strong>Colorado, USA</strong></div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-logo">MYT Enterprises, LLC</div>
+    <p>Auctions · Livestock · Construction · Colorado</p>
+    <nav class="footer-links" aria-label="Footer navigation">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="auctions.html">Auctions</a>
+      <a href="livestock.html">Livestock</a>
+      <a href="construction.html">Construction</a>
+    </nav>
+    <div class="footer-sister">
+      Sister site: <a href="https://www.mytenterprisesinc.com" rel="me" target="_blank">mytenterprisesinc.com</a>
+    </div>
+    <p style="margin-top:1.25rem;">
+      <a href="tel:7193304280" style="color:var(--tan);text-decoration:none;">(719) 330-4280</a>
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      <a href="/cdn-cgi/l/email-protection#335a5d555c735e4a47565d47564143415a4056405a5d501d505c5e" style="color:var(--tan);text-decoration:none;"><span class="__cf_email__" data-cfemail="761f181019361b0f02131802130406041f0513051f18155815191b">[email&#160;protected]</span></a>
+    </p>
+    <p style="margin-top:1rem;">© <span id="yr"></span> MYT Enterprises, LLC. All rights reserved.</p>
+  </footer>
+
+  <script data-cfasync="
