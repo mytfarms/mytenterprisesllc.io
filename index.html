@@ -56,6 +56,7 @@
       --cream:     #FAF6ED;
       --rust:      #A0431F;
       --iron:      #6B5B4E;
+      --green:     #4a7c59;
       --font-display: 'Playfair Display', Georgia, serif;
       --font-body:    'Libre Baskerville', Georgia, serif;
       --font-label:   'Oswald', sans-serif;
@@ -198,8 +199,6 @@
       overflow: hidden;
       padding: 5rem 1.5rem 6rem;
     }
-
-    /* Bottom stripe accent */
     .hero::after {
       content: '';
       position: absolute;
@@ -209,8 +208,6 @@
       height: 5px;
       background: repeating-linear-gradient(90deg, var(--rust) 0, var(--rust) 18px, var(--tan) 18px, var(--tan) 36px);
     }
-
-    /* Large decorative letter */
     .hero-bg-letter {
       position: absolute;
       right: -0.08em;
@@ -224,8 +221,6 @@
       pointer-events: none;
       user-select: none;
     }
-
-    /* Vertical rule accent */
     .hero-rule {
       position: absolute;
       left: 50%;
@@ -235,7 +230,6 @@
       background: linear-gradient(to bottom, transparent, rgba(196,154,108,0.08) 30%, rgba(196,154,108,0.08) 70%, transparent);
       pointer-events: none;
     }
-
     .hero-content {
       max-width: 1100px;
       margin: 0 auto;
@@ -243,7 +237,6 @@
       position: relative;
       z-index: 1;
     }
-
     .hero-eyebrow {
       font-family: var(--font-label);
       font-size: 0.75rem;
@@ -265,7 +258,6 @@
       background: var(--rust);
       flex-shrink: 0;
     }
-
     .hero h1 {
       font-family: var(--font-display);
       font-size: clamp(3.2rem, 8vw, 7rem);
@@ -279,7 +271,6 @@
       font-style: normal;
       color: var(--tan);
     }
-
     .hero-tagline {
       font-family: var(--font-body);
       font-style: italic;
@@ -290,14 +281,12 @@
       line-height: 1.65;
       animation: fadeUp 0.65s 0.16s ease both;
     }
-
     .hero-cta-row {
       display: flex;
       gap: 0.85rem;
       flex-wrap: wrap;
       animation: fadeUp 0.65s 0.24s ease both;
     }
-
     .btn-hero {
       font-family: var(--font-label);
       font-size: 0.8rem;
@@ -329,8 +318,6 @@
       background: rgba(196,154,108,0.08);
       transform: translateY(-1px);
     }
-
-    /* Stats row inside hero */
     .hero-stats {
       display: flex;
       gap: 2.5rem;
@@ -358,14 +345,8 @@
       margin-top: 0.2rem;
       opacity: 0.8;
     }
-
     @media (max-width: 600px) {
-      .hero {
-        min-height: 85vh;
-        padding: 4rem 1.25rem 5rem;
-        align-items: flex-start;
-        padding-top: 3.5rem;
-      }
+      .hero { min-height: 85vh; padding: 4rem 1.25rem 5rem; align-items: flex-start; padding-top: 3.5rem; }
       .hero h1 { font-size: clamp(2.8rem, 14vw, 4.5rem); }
       .hero-bg-letter { display: none; }
       .hero-stats { gap: 1.5rem; margin-top: 3rem; }
@@ -389,6 +370,17 @@
       text-transform: uppercase;
       color: var(--rust);
       margin-bottom: 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .section-label::before {
+      content: '';
+      display: inline-block;
+      width: 22px;
+      height: 2px;
+      background: var(--rust);
+      flex-shrink: 0;
     }
     .section-title {
       font-family: var(--font-display);
@@ -405,51 +397,110 @@
       line-height: 1.75;
     }
 
-    /* ── PILLAR CARDS ── */
+    /* ── PILLAR CARDS (redesigned) ── */
     .pillars { background: var(--parchment); padding: 5rem 0; }
-    .pillar-card {
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+    @media (max-width: 720px) { .pillars-grid { grid-template-columns: 1fr; } }
+
+    .pillar {
       background: var(--cream);
-      border: 1px solid rgba(196,154,108,0.35);
-      border-top: 4px solid var(--rust);
-      border-radius: 3px;
-      padding: 2.25rem 1.75rem;
-      text-align: center;
-      transition: transform 0.22s, box-shadow 0.22s;
-      position: relative;
+      border: 1px solid rgba(196,154,108,0.4);
+      border-radius: 4px;
       overflow: hidden;
-    }
-    .pillar-card::before {
-      content: attr(data-icon);
-      position: absolute;
-      bottom: -0.2em;
-      right: 0.05em;
-      font-size: 5.5rem;
-      opacity: 0.055;
-      line-height: 1;
-      pointer-events: none;
-    }
-    .pillar-card:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(44,26,14,0.13); }
-    .pillar-icon {
-      font-size: 2.25rem;
-      margin-bottom: 1rem;
       display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 60px;
+      flex-direction: column;
+      transition: transform 0.22s, box-shadow 0.22s;
     }
-    .pillar-card h3 {
+    .pillar:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(44,26,14,0.15); }
+    .pillar-header {
+      padding: 1.5rem 1.5rem 1rem;
+      position: relative;
+    }
+    .pillar-header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 1.5rem;
+      right: 1.5rem;
+      height: 1px;
+      background: rgba(196,154,108,0.35);
+    }
+    .pillar-accent {
+      width: 36px;
+      height: 4px;
+      border-radius: 2px;
+      margin-bottom: 1rem;
+    }
+    .pillar-num {
       font-family: var(--font-display);
-      font-size: 1.4rem;
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1;
+      opacity: 0.07;
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+      color: var(--soil);
+      pointer-events: none;
+      user-select: none;
+    }
+    .pillar h3 {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
       font-weight: 700;
       color: var(--soil);
-      margin-bottom: 0.65rem;
+      line-height: 1.2;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 1;
     }
-    .pillar-card p {
-      font-size: 0.9rem;
+    .pillar-body {
+      padding: 1rem 1.5rem 0;
+      flex: 1;
+    }
+    .pillar-body p {
+      font-size: 0.88rem;
       color: var(--iron);
       line-height: 1.7;
-      margin-bottom: 1.25rem;
     }
+    .pillar-footer {
+      padding: 1rem 1.5rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .pillar-tag {
+      font-family: var(--font-label);
+      font-size: 0.65rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--iron);
+      opacity: 0.7;
+    }
+    .pillar-cta {
+      font-family: var(--font-label);
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.4rem 0.85rem;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.18s;
+    }
+    .cta-rust { background: var(--rust); color: var(--cream); }
+    .cta-rust:hover { background: var(--soil); text-decoration: none; }
+    .cta-green { background: var(--green); color: var(--cream); }
+    .cta-green:hover { background: var(--soil); text-decoration: none; }
+    .cta-iron { background: var(--iron); color: var(--straw); }
+    .cta-iron:hover { background: var(--soil); text-decoration: none; }
 
     /* ── ABOUT BAND ── */
     .about-band {
@@ -473,6 +524,7 @@
     }
     .about-inner { max-width: 700px; }
     .about-band .section-label { color: var(--tan); }
+    .about-band .section-label::before { background: var(--tan); }
     .about-band .section-title { color: var(--straw); }
     .about-band p {
       color: rgba(232,213,163,0.8);
@@ -508,43 +560,84 @@
       margin-top: 0.2rem;
     }
 
-    /* ── CARDS ── */
-    .card {
+    /* ── UPDATES CARDS (redesigned) ── */
+    .updates-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+    .update-card {
       background: var(--parchment);
-      border: 1px solid rgba(196,154,108,0.45);
-      border-top: 4px solid var(--rust);
-      border-radius: 3px;
-      padding: 1.75rem;
+      border: 1px solid rgba(196,154,108,0.4);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
       transition: transform 0.2s, box-shadow 0.2s;
     }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(44,26,14,0.13); }
-    .card-tag {
+    .update-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(44,26,14,0.13); }
+    .update-card-color-bar { height: 4px; width: 100%; }
+    .update-card-inner {
+      padding: 1.25rem 1.25rem 1rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .update-badge {
+      display: inline-flex;
+      align-items: center;
       font-family: var(--font-label);
-      font-size: 0.7rem;
+      font-size: 0.63rem;
       font-weight: 600;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: var(--rust);
-      margin-bottom: 0.5rem;
+      padding: 0.22rem 0.6rem;
+      border-radius: 2px;
+      margin-bottom: 0.75rem;
+      align-self: flex-start;
     }
-    .card h3 {
+    .badge-rust { background: rgba(160,67,31,0.12); color: var(--rust); }
+    .badge-green { background: rgba(74,124,89,0.12); color: var(--green); }
+    .badge-iron { background: rgba(107,91,78,0.15); color: var(--iron); }
+    .update-card h3 {
       font-family: var(--font-display);
-      font-size: 1.2rem;
+      font-size: 1.05rem;
       font-weight: 700;
       color: var(--soil);
-      margin-bottom: 0.5rem;
       line-height: 1.3;
+      margin-bottom: 0.5rem;
     }
-    .card p { font-size: 0.88rem; color: var(--iron); line-height: 1.65; }
-    .card-meta {
+    .update-card p {
+      font-size: 0.88rem;
+      color: var(--iron);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .update-card-footer {
+      padding: 0.75rem 1.25rem 1rem;
+      border-top: 1px solid rgba(196,154,108,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .update-meta {
       font-family: var(--font-label);
-      font-size: 0.72rem;
-      letter-spacing: 0.08em;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
       color: var(--saddle);
-      margin-top: 1rem;
-      padding-top: 0.75rem;
-      border-top: 1px solid rgba(196,154,108,0.4);
+      opacity: 0.8;
     }
+    .update-link {
+      font-family: var(--font-label);
+      font-size: 0.68rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--rust);
+      text-decoration: none;
+    }
+    .update-link:hover { color: var(--soil); text-decoration: none; }
 
     /* ── BUTTONS ── */
     .btn {
@@ -578,7 +671,7 @@
       padding: 2.75rem 1.5rem;
       text-align: center;
     }
-    .sister-band .section-label { margin-bottom: 0.4rem; }
+    .sister-band .section-label { margin-bottom: 0.4rem; justify-content: center; }
     .sister-band h2 {
       font-family: var(--font-display);
       font-size: 1.55rem;
@@ -683,7 +776,6 @@
     }
     .footer-contact-item:hover { color: var(--straw); }
     .footer-contact-static { color: var(--iron); cursor: default; }
-
     .footer-nav { text-align: center; }
     .footer-nav-label {
       font-family: var(--font-label);
@@ -705,7 +797,6 @@
       padding: 0.15rem 0;
     }
     .footer-nav a:hover { color: var(--tan); }
-
     .footer-right { text-align: right; }
     .footer-sister-label {
       font-family: var(--font-label);
@@ -736,7 +827,6 @@
       color: var(--iron);
       line-height: 2;
     }
-
     .footer-divider {
       max-width: 1100px;
       margin: 1.75rem auto 0;
@@ -759,10 +849,7 @@
       text-transform: uppercase;
       color: var(--iron);
     }
-    .footer-bottom-divs {
-      display: flex;
-      gap: 1.25rem;
-    }
+    .footer-bottom-divs { display: flex; gap: 1.25rem; }
     .footer-bottom-divs span {
       font-family: var(--font-label);
       font-size: 0.68rem;
@@ -849,42 +936,57 @@
     <section class="pillars" id="services" aria-labelledby="services-heading">
       <div class="container">
         <div style="text-align:center; margin-bottom:3rem;">
-          <p class="section-label">What We Do</p>
+          <p class="section-label" style="justify-content:center;">What We Do</p>
           <h2 class="section-title" id="services-heading">Three Ways We Serve You</h2>
           <p class="section-sub" style="margin:0 auto;">Whether you're buying at auction, sourcing quality livestock, or breaking ground on a new build — MYT Enterprises has the experience and drive to get it done right.</p>
         </div>
-        <div class="grid-3">
-          <article class="pillar-card" data-icon="🔨">
-            <span class="pillar-icon" aria-hidden="true">
-              <svg width="76" height="68" viewBox="0 0 140 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g transform="translate(18,8) rotate(-28,60,60)">
-                  <rect x="6"  y="51" width="72" height="18" rx="9"  fill="#A0561E"/>
-                  <ellipse cx="10" cy="60" rx="11" ry="9" fill="#7B3D10"/>
-                  <rect x="74" y="44" width="16" height="32" rx="4"  fill="#7B3D10"/>
-                  <rect x="76" y="51" width="16" height="5"  rx="2"  fill="#5A2A08"/>
-                  <rect x="76" y="60" width="16" height="5"  rx="2"  fill="#5A2A08"/>
-                  <rect x="86" y="30" width="26" height="60" rx="7"  fill="#9A5020"/>
-                  <rect x="86" y="30" width="26" height="14" rx="6"  fill="#C47C3A"/>
-                  <rect x="86" y="76" width="26" height="14" rx="6"  fill="#C47C3A"/>
-                </g>
-              </svg>
-            </span>
-            <h3>Colorado Auction Services</h3>
-            <p>From farm equipment to estate sales, our auction events connect buyers and sellers across Colorado and the surrounding region. Transparent, efficient, and expertly run.</p>
-            <a href="auctions.html" class="btn">Auction Updates →</a>
+        <div class="pillars-grid">
+
+          <article class="pillar">
+            <div class="pillar-header">
+              <div class="pillar-num">01</div>
+              <div class="pillar-accent" style="background:var(--rust);"></div>
+              <h3>Auction Services</h3>
+            </div>
+            <div class="pillar-body">
+              <p>From livestock to fundraisers, our auction events connect buyers and sellers across Colorado and the surrounding region. Transparent, efficient, expertly run.</p>
+            </div>
+            <div class="pillar-footer">
+              <span class="pillar-tag">Auctions</span>
+              <a href="auctions.html" class="pillar-cta cta-rust">Auction Updates →</a>
+            </div>
           </article>
-          <article class="pillar-card" data-icon="🐄">
-            <span class="pillar-icon" aria-hidden="true">🐄</span>
-            <h3>Livestock Sales &amp; Ranching</h3>
-            <p>Quality cattle and livestock, raised and handled with care on Colorado range. We share updates on animals, sales, and ranching insights to keep you informed.</p>
-            <a href="livestock.html" class="btn">Livestock News →</a>
+
+          <article class="pillar">
+            <div class="pillar-header">
+              <div class="pillar-num">02</div>
+              <div class="pillar-accent" style="background:var(--green);"></div>
+              <h3>Regenerative Ranching</h3>
+            </div>
+            <div class="pillar-body">
+              <p>Quality cattle and livestock, raised and handled with care on Colorado range. Updates on animals, sales, and ranching insights to keep you informed.</p>
+            </div>
+            <div class="pillar-footer">
+              <span class="pillar-tag">Livestock</span>
+              <a href="livestock.html" class="pillar-cta cta-green">Livestock News →</a>
+            </div>
           </article>
-          <article class="pillar-card" data-icon="🏗️">
-            <span class="pillar-icon" aria-hidden="true">🏗️</span>
-            <h3>Agricultural Construction</h3>
-            <p>Solid builds, honest work. Follow along on our Colorado construction projects — from site prep to finishing touches — with project logs and updates.</p>
-            <a href="construction.html" class="btn">Project Updates →</a>
+
+          <article class="pillar">
+            <div class="pillar-header">
+              <div class="pillar-num">03</div>
+              <div class="pillar-accent" style="background:var(--iron);"></div>
+              <h3>Front Range Construction</h3>
+            </div>
+            <div class="pillar-body">
+              <p>Solid builds, honest work. Follow along on our Colorado construction projects — from site prep to finishing touches — with project logs and updates.</p>
+            </div>
+            <div class="pillar-footer">
+              <span class="pillar-tag">Construction</span>
+              <a href="construction.html" class="pillar-cta cta-iron">Project Updates →</a>
+            </div>
           </article>
+
         </div>
       </div>
     </section>
@@ -912,28 +1014,47 @@
       <div class="container">
         <p class="section-label">Fresh Off the Press</p>
         <h2 class="section-title" id="latest-heading" style="margin-bottom:2rem;">Latest Updates</h2>
-        <div class="grid-3">
-          <article class="card">
-            <p class="card-tag">Auctions</p>
-            <h3>World Wide College of Auctioneering — Des Moines, IA</h3>
-            <p>Eight days of intensive bid calling, business education, and genuine connection at one of the top auction schools in the country.</p>
-            <div class="card-meta">March 2025 · Auctions Division</div>
-            <a href="auctions.html#auction-school-2025" class="btn btn-outline">Read More</a>
+        <div class="updates-grid">
+
+          <article class="update-card">
+            <div class="update-card-color-bar" style="background:var(--rust);"></div>
+            <div class="update-card-inner">
+              <span class="update-badge badge-rust">Auctions</span>
+              <h3>World Wide College of Auctioneering — Des Moines, IA</h3>
+              <p>Eight days of intensive bid calling, business education, and genuine connection at one of the top auction schools in the country.</p>
+            </div>
+            <div class="update-card-footer">
+              <span class="update-meta">March 2025 · Auctions Division</span>
+              <a href="auctions.html#auction-school-2025" class="update-link">Read More →</a>
+            </div>
           </article>
-          <article class="card">
-            <p class="card-tag">Livestock</p>
-            <h3>New Calves Hit the Ground</h3>
-            <p>Calving season is in full swing. Check the livestock blog for updates on numbers, weights, and availability.</p>
-            <div class="card-meta">Posted Recently · Livestock Division</div>
-            <a href="livestock.html" class="btn btn-outline">Read More</a>
+
+          <article class="update-card">
+            <div class="update-card-color-bar" style="background:var(--green);"></div>
+            <div class="update-card-inner">
+              <span class="update-badge badge-green">Livestock</span>
+              <h3>New Calves Hit the Ground</h3>
+              <p>Check back soon for new calf photos!</p>
+            </div>
+            <div class="update-card-footer">
+              <span class="update-meta">Posted Recently · Livestock Division</span>
+              <a href="livestock.html" class="update-link">Read More →</a>
+            </div>
           </article>
-          <article class="card">
-            <p class="card-tag">Construction</p>
-            <h3>Pole Barn Project: Foundation Complete</h3>
-            <p>Site prep and foundation work is wrapped up on our latest pole barn build. Framing starts next week.</p>
-            <div class="card-meta">Posted Recently · Construction Division</div>
-            <a href="construction.html" class="btn btn-outline">Read More</a>
+
+          <article class="update-card">
+            <div class="update-card-color-bar" style="background:var(--iron);"></div>
+            <div class="update-card-inner">
+              <span class="update-badge badge-iron">Construction</span>
+              <h3>Pole Barn Project: Foundation Complete</h3>
+              <p>Check back soon for project updates!</p>
+            </div>
+            <div class="update-card-footer">
+              <span class="update-meta">Posted Recently · Construction Division</span>
+              <a href="construction.html" class="update-link">Read More →</a>
+            </div>
           </article>
+
         </div>
       </div>
     </section>
